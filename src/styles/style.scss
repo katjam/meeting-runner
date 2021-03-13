@@ -1,0 +1,97 @@
+$light: #f6f4d2;
+//$mid1: #d4e09b;
+//$mid2: #cbdfbd; //tea green
+//$mid2: #ace4aa; //granny smith apple
+//$mid3: #73a6ad; //cadet blue
+//$mid3: #f19c79; // peach
+//$dark: #a44a3f; //light rust
+$dark3: #49306b; //cyber grape
+
+$mid1: #ee964b;
+$mid2: #f4d35e;
+$mid3: #28afb0;
+$dark: #1f271b;
+$dark2: #19647e;
+
+body {
+  background-color: $mid3; //#48a9a6;
+  font-family: "sans";
+  font-size: 1.2em;
+}
+
+body > div {
+  background-color: #e4dfda !important;
+}
+
+a {
+  color: $dark3;
+  &:hover {
+    background-color: darken(#e4dfda, 10);
+    color: darken($dark3, 15);
+  }
+}
+
+h1, h2 {
+  color: $dark;
+}
+
+hr {
+  background-color: $mid3;
+}
+
+h2 span {
+
+  &.who {
+    background-color: $mid2; //#d4b483;
+    border-radius: 8px;
+    border: 2px solid $dark2; //#4281a4;
+    color: $dark2; //#4281a4;
+    font-size: 0.6em;
+    padding: 3px 5px;
+    margin: 0 10px 0 30px;
+  }
+
+  &.time {
+    font-size: 0.7em;
+  }
+}
+
+.stopwatch {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  border: 5px dashed $mid1;
+  padding: 10px;
+  background: $mid2;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  text-align: center;
+  span {
+    font-size: 24px;
+  }
+  button {
+    background-color: $mid1;
+    border: none;
+    border-radius: 100px;
+    display: block;
+    font-size: 18px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.slides li {
+  padding-bottom: 10px;
+}
+
+.footer {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
