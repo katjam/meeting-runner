@@ -1,7 +1,7 @@
 module Slides exposing (Message, Model, slides, subscriptions, update, view)
 
-import Html exposing (Html, a, button, div, h1, h2, hr, li, p, span, text, ul)
-import Html.Attributes exposing (class, href, style)
+import Html exposing (Html, a, button, div, h1, h2, h3, hr, img, li, p, span, text, ul)
+import Html.Attributes exposing (class, href, src, style)
 import Html.Events exposing (onClick)
 import Markdown
 import SliceShow.Content exposing (..)
@@ -109,29 +109,85 @@ subscriptions model =
 -}
 slides : List CustomSlide
 slides =
-    [ [ slideHeading "Needs, experiences and ideations workshop"
+    [ [ slideHeading "Needs, experiences and ideation"
+      , item (h2 [] [ text "A workshop with teaching professionals for The Gallery at The Point" ])
+      , slideHr
       , bullets
-            [ bulletLink "The miro board" "https://miro.com/app/board/o9J_lT0_Z5k=/"
+            [ bulletLink "The gallery at the Point website" "https://thepoint.org.uk/the-point/gallery/"
+            , bulletLink "The miro board" "https://miro.com/app/board/o9J_lT0_Z5k=/"
             ]
       ]
     , [ slideHeading "The plan"
+      , slideHr
       , bullets
             [ bullet "Quick Intros"
             , bullet "Read through stories - add and amend"
             , bullet "Figure out which are the most important"
             , bullet "Take a look at some of our resource ideas"
-            , bullet "Map out current experiece for the most important need"
+            , bullet "Map out current experience for the most important need"
             , bullet "Suggest solutions"
             ]
       , item (h2 [] [ text "Any questions before we start?" ]) |> hide
       ]
-    , [ slideHeading "Who are we and why are we doing this?"
-      , slideP ""
+    , [ slideHeading "Who are we, why are we here?"
+      , slideHr
       , container (div [])
-            [ timedHeading "1" "Independently" "Note down one thing"
-            , bullets [ bullet "that you are looking forward to or excited about", bullet "that you are worried or confused about" ]
+            [ timedHeading "3" "In turn" "Say 2 things"
+            , bullets
+                [ bullet "something about yourself"
+                , bullet "why you came today"
+                ]
             ]
             |> hide
+      ]
+    , [ slideHeading "Things we need"
+      , slideH3 "(that The Point might provide)"
+      , slideHr
+      , timedHeading "5" "Independently" "Read the need statements"
+      , slideP "Use the numbers as reference and note down:"
+      , bullets
+            [ bullet "if it is not true"
+            , bullet "if it could be worded differently to make it more true"
+            , bullet "if we have missed out something you think we could provide that you need"
+            ]
+      ]
+    , [ item (img [ src "./userneeds.png" ] [])
+      ]
+    , [ slideHeading "Things we need"
+      , slideH3 "(that The Point might provide)"
+      , slideHr
+      , timedHeading "8" "Together" "Talk through our notes"
+      , bullets
+            [ bullet "set aside any that we have agreed are not true"
+            , bullet "add any that we agree are important"
+            , bullet "make agreed amendments"
+            ]
+      ]
+    , [ slideHeading "Things we need"
+      , slideH3 "(that The Point might provide)"
+      , slideHr
+      , timedHeading "2" "Independently" "Choose 3"
+      , slideP "Note down the 3 that are most true and most important to you now"
+      , slideP "If you had trouble deciding, was there one more you's like to include?" |> hide
+      ]
+    , [ slideHeading "Things we need"
+      , slideH3 "(that The Point might provide)"
+      , slideHr
+      , timedHeading "5" "Together" "Choose 1"
+      , slideP "Agree one of the needs that we can look at in more detail together now"
+      ]
+    , [ slideHeading "A look at some resources"
+      ]
+    , [ slideHeading "Map out current experience"
+      , bullets
+            [ bullet ""
+            , bullet ""
+            ]
+      ]
+    , [ slideHeading "Ideas!"
+      , timedHeading "5" "Independently" "How might we..."
+      ]
+    , [ slideHeading "How much effort? How much value?"
       ]
     ]
         |> List.map paddedSlide
@@ -145,6 +201,16 @@ slideHeading title =
 slideHr : CustomContent
 slideHr =
     item (hr [] [])
+
+
+slideH2 : String -> CustomContent
+slideH2 heading =
+    item (h2 [] [ text heading ])
+
+
+slideH3 : String -> CustomContent
+slideH3 heading =
+    item (h3 [] [ text heading ])
 
 
 slideP : String -> CustomContent

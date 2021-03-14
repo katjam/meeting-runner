@@ -4,7 +4,7 @@
   "description": "Meeting runner for UX sessions",
   "scripts": {
     "format": "elm-format src",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js --port 3000 --hot",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js --port 3000 --watch --hot",
     "build": "./node_modules/.bin/webpack --config webpack.config.build.js",
     "review": "elm-review",
     "test": "elm-test",

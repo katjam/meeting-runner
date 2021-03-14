@@ -1,17 +1,25 @@
-$light: #f6f4d2;
+//$light: #f6f4d2;
 //$mid1: #d4e09b;
 //$mid2: #cbdfbd; //tea green
 //$mid2: #ace4aa; //granny smith apple
 //$mid3: #73a6ad; //cadet blue
 //$mid3: #f19c79; // peach
 //$dark: #a44a3f; //light rust
-$dark3: #49306b; //cyber grape
+//$dark3: #49306b; //cyber grape
 
-$mid1: #ee964b;
-$mid2: #f4d35e;
-$mid3: #28afb0;
-$dark: #1f271b;
-$dark2: #19647e;
+//$mid1: #ee964b;
+//$mid2: #f4d35e;
+//$mid3: #28afb0;
+//$dark: #1f271b;
+//$dark2: #19647e;
+
+$light: #fff;
+$mid1: #ef793b; // point orange
+$mid2: #f5adb9; // point pink
+$mid3: #57b6b2; // point turq
+$dark3: #445ba6; // point dark blue
+$dark:#532b3a; // point maroon
+$dark2: #025157; //point dark turq
 
 body {
   background-color: $mid3; //#48a9a6;
@@ -20,19 +28,26 @@ body {
 }
 
 body > div {
-  background-color: #e4dfda !important;
+  //background-color: #e4dfda !important;
+  background-color: $light !important;
+  border-top: 10px solid $dark3;
+  border-bottom: 18px solid $dark3;
 }
 
 a {
   color: $dark3;
   &:hover {
-    background-color: darken(#e4dfda, 10);
+    background-color: darken($light, 10);
     color: darken($dark3, 15);
   }
 }
 
-h1, h2 {
-  color: $dark;
+img {
+  width: 95%;
+}
+
+h1, h2, h3 {
+  color: $dark2;
 }
 
 hr {
@@ -44,9 +59,9 @@ h2 span {
   &.who {
     background-color: $mid2; //#d4b483;
     border-radius: 8px;
-    border: 2px solid $dark2; //#4281a4;
-    color: $dark2; //#4281a4;
-    font-size: 0.6em;
+    //border: 2px solid $dark; //#4281a4;
+    color: $dark; //#4281a4;
+    font-size: 0.5em;
     padding: 3px 5px;
     margin: 0 10px 0 30px;
   }
