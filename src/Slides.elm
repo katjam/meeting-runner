@@ -113,7 +113,7 @@ slides =
       , item (h2 [] [ text "A workshop with teaching professionals for The Gallery at The Point" ])
       , slideHr
       , bullets
-            [ bulletLink "The gallery at the Point website" "https://thepoint.org.uk/the-point/gallery/"
+            [ bulletLink "The Gallery at the Point website" "https://thepoint.org.uk/the-point/gallery/"
             , bulletLink "The miro board" "https://miro.com/app/board/o9J_lT0_Z5k=/"
             ]
       ]
