@@ -109,17 +109,19 @@ subscriptions model =
 -}
 slides : List CustomSlide
 slides =
-    [ [ slideHeading "Needs, experiences and ideation"
-      , item (h2 [] [ text "A workshop with teaching professionals for The Gallery at The Point" ])
-      , slideHr
-      , bullets
+    [ ( [ slideHeading "Needs, experiences and ideation"
+        , item (h2 [] [ text "A workshop with teaching professionals for The Gallery at The Point" ])
+        , slideHr
+        , bullets
             [ bulletLink "The Gallery at the Point website" "https://thepoint.org.uk/the-point/gallery/"
             , bulletLink "The miro board" "https://miro.com/app/board/o9J_lT0_Z5k=/"
             ]
-      ]
-    , [ slideHeading "The plan"
-      , slideHr
-      , bullets
+        ]
+      , ""
+      )
+    , ( [ slideHeading "The plan"
+        , slideHr
+        , bullets
             [ bullet "Quick Intros"
             , bullet "Read through stories - add and amend"
             , bullet "Figure out which are the most important"
@@ -127,11 +129,13 @@ slides =
             , bullet "Map out current experience for the most important need"
             , bullet "Suggest solutions"
             ]
-      , item (h2 [] [ text "Any questions before we start?" ]) |> hide
-      ]
-    , [ slideHeading "Who are we, why are we here?"
-      , slideHr
-      , container (div [])
+        , item (h2 [] [ text "Any questions before we start?" ]) |> hide
+        ]
+      , ""
+      )
+    , ( [ slideHeading "Who are we, why are we here?"
+        , slideHr
+        , container (div [])
             [ timedHeading "3" "In turn" "Say 2 things"
             , bullets
                 [ bullet "something about yourself"
@@ -139,56 +143,80 @@ slides =
                 ]
             ]
             |> hide
-      ]
-    , [ slideHeading "Things we need"
-      , slideH3 "(that The Point might provide)"
-      , slideHr
-      , timedHeading "5" "Independently" "Read the need statements"
-      , slideP "Use the numbers as reference and note down:"
-      , bullets
+        ]
+      , "1605"
+      )
+    , ( [ slideHeading "Things we need"
+        , slideH3 "(that The Point might provide)"
+        , slideHr
+        , timedHeading "5" "Independently" "Read the need statements"
+        , slideP "Use the numbers as reference and note down:"
+        , bullets
             [ bullet "if it is not true"
             , bullet "if it could be worded differently to make it more true"
             , bullet "if we have missed out something you think we could provide that you need"
             ]
-      ]
-    , [ item (img [ src "./userneeds.png" ] [])
-      ]
-    , [ slideHeading "Things we need"
-      , slideH3 "(that The Point might provide)"
-      , slideHr
-      , timedHeading "8" "Together" "Talk through our notes"
-      , bullets
+        ]
+      , ""
+      )
+    , ( [ item (img [ src "./userneeds.png" ] [])
+        ]
+      , "1612"
+      )
+    , ( [ slideHeading "Things we need"
+        , slideH3 "(that The Point might provide)"
+        , slideHr
+        , timedHeading "8" "Together" "Talk through our notes"
+        , bullets
             [ bullet "set aside any that we have agreed are not true"
             , bullet "add any that we agree are important"
             , bullet "make agreed amendments"
             ]
-      ]
-    , [ slideHeading "Things we need"
-      , slideH3 "(that The Point might provide)"
-      , slideHr
-      , timedHeading "2" "Independently" "Choose 3"
-      , slideP "Note down the 3 that are most true and most important to you now"
-      , slideP "If you had trouble deciding, was there one more you's like to include?" |> hide
-      ]
-    , [ slideHeading "Things we need"
-      , slideH3 "(that The Point might provide)"
-      , slideHr
-      , timedHeading "5" "Together" "Choose 1"
-      , slideP "Agree one of the needs that we can look at in more detail together now"
-      ]
-    , [ slideHeading "A look at some resources"
-      ]
-    , [ slideHeading "Map out current experience"
-      , bullets
+        ]
+      , "1620"
+      )
+    , ( [ slideHeading "Things we need"
+        , slideH3 "(that The Point might provide)"
+        , slideHr
+        , timedHeading "2" "Independently" "Choose 3"
+        , slideP "Note down the 3 that are most true and most important to you now"
+        , slideP "If you had trouble deciding, was there one more you'd like to include?" |> hide
+        ]
+      , "1622"
+      )
+    , ( [ slideHeading "Things we need"
+        , slideH3 "(that The Point might provide)"
+        , slideHr
+        , timedHeading "5" "Together" "Choose 1"
+        , bullets
+            [ bullet "Agree one of the needs that we can look at in more detail together now"
+            , bulletLink "Copy that need into excel template" "https://docs.google.com/spreadsheets/d/1qjc5p0F6XZfbqMRVwXfeZkxhDG34ZvnToGmFIEhcHeI/edit#gid=0"
+            ]
+        ]
+      , "1630"
+      )
+    , ( [ slideHeading "A look at some resources"
+        , timedHeading "8" "Together" "Helen & Amy share"
+        ]
+      , "1638"
+      )
+    , ( [ slideHeading "Map out current experience"
+        , bullets
             [ bullet ""
             , bullet ""
             ]
-      ]
-    , [ slideHeading "Ideas!"
-      , timedHeading "5" "Independently" "How might we..."
-      ]
-    , [ slideHeading "How much effort? How much value?"
-      ]
+        ]
+      , "1645"
+      )
+    , ( [ slideHeading "Ideas!"
+        , timedHeading "5" "Independently" "How might we..."
+        ]
+      , "1652"
+      )
+    , ( [ slideHeading "How much effort? How much value?"
+        ]
+      , "1700!"
+      )
     ]
         |> List.map paddedSlide
 
@@ -257,8 +285,8 @@ bulletLink str url =
 
 {-| Custom slide that sets the padding and appends the custom content
 -}
-paddedSlide : List CustomContent -> CustomSlide
-paddedSlide content =
+paddedSlide : ( List CustomContent, String ) -> CustomSlide
+paddedSlide ( content, extraBit ) =
     slide
         [ container
             (div [ class "slides", style "padding" "50px 100px" ])
@@ -270,7 +298,7 @@ paddedSlide content =
                         }
                    , item
                         (div [ class "footer" ]
-                            [ text ""
+                            [ text extraBit
                             ]
                         )
                    ]
