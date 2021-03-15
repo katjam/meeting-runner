@@ -251,7 +251,7 @@ slides =
         , timedHeading "8" "Together" "Share our ideas"
         , slideH3 "When we are giving value and effort to these, think about:"
         , bullets
-            [ bullet "What (needs) does it answer?"
+            [ bullet "What need(s) does it answer?"
             , bullet "Why do it?"
             , bullet "What more do we need to do or know before we can do it?"
             , bullet "What are the risks & challenges?"

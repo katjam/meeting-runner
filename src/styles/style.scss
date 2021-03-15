@@ -108,15 +108,23 @@ h2 span {
 
 .slides .compact {
   font-size: 0.7em;
-  margin-right: 120px;
-  margin-top: -20px;
+  padding: 0;
+  margin: 0 auto;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
   span {
     border: 1px solid darken(#fff, 10);
-    display: block;
     padding: 2px;
-    &:nth-child(odd) {
-      background: darken(#fff, 10);
-    }
+    background: darken(#fff, 10);
+  margin: 0.2em;
+  flex: 1 1 auto;
+  width: 200px;
   }
 }
 
