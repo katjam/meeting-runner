@@ -1,6 +1,6 @@
 module Slides exposing (Message, Model, slides, subscriptions, update, view)
 
-import Html exposing (Html, a, button, div, h1, h2, h3, hr, img, li, p, span, text, ul)
+import Html exposing (Html, a, br, button, div, h1, h2, h3, hr, img, li, p, span, text, ul)
 import Html.Attributes exposing (class, href, src, style)
 import Html.Events exposing (onClick)
 import Markdown
@@ -123,9 +123,9 @@ slides =
         , slideHr
         , bullets
             [ bullet "Quick Intros"
+            , bullet "Take a look at some of our resource ideas"
             , bullet "Read through stories - add and amend"
             , bullet "Figure out which are the most important"
-            , bullet "Take a look at some of our resource ideas"
             , bullet "Map out current experience for the most important need"
             , bullet "Suggest solutions"
             ]
@@ -145,6 +145,11 @@ slides =
             |> hide
         ]
       , "1605"
+      )
+    , ( [ slideHeading "A look at some resources"
+        , timedHeading "8" "Together" "Helen & Amy share"
+        ]
+      , "1613"
       )
     , ( [ slideHeading "Things we need"
         , slideH3 "(that The Point might provide)"
@@ -180,7 +185,7 @@ slides =
                 "15. I need to be able to deliver cultural content to my students free of charge because transport costs alone are expensive so that students can access richer content related to curriculum"
             ]
         ]
-      , "1612"
+      , "1620"
       )
     , ( [ slideHeading "Things we need"
         , slideH3 "(that The Point might provide)"
@@ -191,8 +196,9 @@ slides =
             , bullet "add any that we agree are important"
             , bullet "make agreed amendments"
             ]
+        , item (a [ href "https://miro.com/app/board/o9J_lT0_Z5k=" ] [ text "Miro board" ])
         ]
-      , "1620"
+      , "1628"
       )
     , ( [ slideHeading "Things we need"
         , slideH3 "(that The Point might provide)"
@@ -201,7 +207,7 @@ slides =
         , slideP "Note down the 3 that are most true and most important to you now"
         , slideP "If you had trouble deciding, was there one more you'd like to include?" |> hide
         ]
-      , "1622"
+      , "1630"
       )
     , ( [ slideHeading "Things we need"
         , slideH3 "(that The Point might provide)"
@@ -209,20 +215,23 @@ slides =
         , timedHeading "5" "Together" "Choose 1"
         , bullets
             [ bullet "Agree one of the needs that we can look at in more detail together now"
-            , bulletLink "Copy that need into excel template" "https://docs.google.com/spreadsheets/d/1qjc5p0F6XZfbqMRVwXfeZkxhDG34ZvnToGmFIEhcHeI/edit#gid=0"
+            , bullet "Copy that need into excel template"
             ]
-        ]
-      , "1630"
-      )
-    , ( [ slideHeading "A look at some resources"
-        , timedHeading "8" "Together" "Helen & Amy share"
+        , item (a [ href "https://docs.google.com/spreadsheets/d/1qjc5p0F6XZfbqMRVwXfeZkxhDG34ZvnToGmFIEhcHeI/edit#gid=0" ] [ text "Excel template" ])
+        , item (br [] [])
+        , item (a [ href "https://miro.com/app/board/o9J_lT0_Z5k=" ] [ text "Miro board" ])
         ]
       , "1638"
       )
     , ( [ slideHeading "Map out current experience"
         , bullets
-            [ bullet ""
-            , bullet ""
+            [ bullet "Fill in: who, need, start, ideal end"
+            , bullet "First Step is starting point"
+            , bullet "Micro step is goal for that one"
+            , bullet "What do they do, say and feel to reach that goal"
+            , bullet "Next step ... repeat"
+            , bullet "Where is it annoying, difficult, impossible now?"
+            , bullet "Generate a 'How might we..' statement"
             ]
         ]
       , "1645"
