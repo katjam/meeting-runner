@@ -75,8 +75,8 @@ h2 span {
 
 .stopwatch {
   position: absolute;
-  top: 17px;
-  right: 17px;
+  top: 10px;
+  right: 10px;
   border: 5px dashed $mid1;
   padding: 10px;
   background: $mid2;
@@ -109,7 +109,7 @@ h2 span {
 .slides .compact {
   font-size: 0.7em;
   padding: 0;
-  margin: 0 auto;
+  margin: -15px;
 
   display: -webkit-box;
   display: -moz-box;
@@ -120,9 +120,9 @@ h2 span {
   justify-content: space-around;
   span {
     border: 1px solid darken(#fff, 10);
-    padding: 2px;
+    padding: 4px;
     background: darken(#fff, 10);
-  margin: 0.2em;
+  margin: 0.3em;
   flex: 1 1 auto;
   width: 200px;
   }
