@@ -238,10 +238,26 @@ slides =
       )
     , ( [ slideHeading "Ideas!"
         , timedHeading "5" "Independently" "How might we..."
+        , bullets
+            [ bullet "Set stopwatch 1 min at a time"
+            , bullet "Think of a solution. Make notes about it."
+            , bullet "Each time minute is up, think of a new idea"
+            ]
+        , slideP "After we all have 5 ideas, we'll compare and discuss."
         ]
       , "1652"
       )
     , ( [ slideHeading "How much effort? How much value?"
+        , timedHeading "8" "Together" "Share our ideas"
+        , slideH3 "When we are giving value and effort to these, think about:"
+        , bullets
+            [ bullet "What (needs) does it answer?"
+            , bullet "Why do it?"
+            , bullet "What more do we need to do or know before we can do it?"
+            , bullet "What are the risks & challenges?"
+            , bullet "How will we measure if it is working?"
+            ]
+        , item (a [ href "https://miro.com/app/board/o9J_lT0_Z5k=" ] [ text "Miro board" ])
         ]
       , "1700!"
       )
