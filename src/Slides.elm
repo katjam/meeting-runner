@@ -159,7 +159,26 @@ slides =
         ]
       , ""
       )
-    , ( [ item (img [ src "./userneeds.png" ] [])
+    , ( [ slideHeading "Things we need"
+        , container (div [ class "compact" ])
+            [ spanText "1. I need to be able to sign up to receive information directly so that members of the management team (or person who filters incoming content) cannot accidentally cause me miss out on opportunities"
+            , spanText "2. I need access to regular training opportunities  so that I can continue my professional development and provide exciting, inspirational lessons for my pupils"
+            , spanText "5. I need to see resources in advance if I am bringing my class for a visit so that I can plan my lessons"
+            , spanText "3. I need to know where to go to access practical information and engagement details so that I am not wasting time searching"
+            , spanText "4. I need access to regularly updated information in one place to keep me up to date so that I don't miss out on opportunities for me or my pupils"
+            , spanText "6. I need\u{00A0} to be able to book workshops with professional artists so that my pupils have a richer learning experience and\u{00A0}I can learn new skills and be inspired"
+            , spanText "8. I need the opportunity to input into programming at The Point so that exhibitions and resources are relevant to what I am teaching in the classroom"
+            , spanText "7. I\u{00A0} need online artist workshops so we can access enriching experiences in school and overcome the barriers to organising out of school visits"
+            , spanText "9. I need an online space for my pupils to share their artwork to give them a sense of achievement, document their learning and share with friends/family/peers"
+            , spanText "10. I need resources to be directly relevant to the curriculum so that I can use them to deliver my lessons and achieve KPI's"
+            , spanText "11. I need to be able to see or sign up for regular short  updates to inspire me and direct me to the right place so that I can find out about opportunities that are relevant to me"
+            , spanText "12. I need to know what is going to be on show in the gallery at The Point many months in advance to enable me to decide if and how I can engage with the opportunities on offer"
+            , spanText "13. I need to understand what information is relevant to me in the messaging coming out of darts so that I don't stop listening when 9 of 10 messages are not for me"
+            , spanText
+                "14. I need to know who the key people are so that I can build a rapport with staff and feel connected and invested in the gallery offer"
+            , spanText
+                "15. I need to be able to deliver cultural content to my students free of charge because transport costs alone are expensive so that students can access richer content related to curriculum"
+            ]
         ]
       , "1612"
       )
@@ -276,6 +295,11 @@ bullets =
 bullet : String -> CustomContent
 bullet str =
     item (li [] [ text str ])
+
+
+spanText : String -> CustomContent
+spanText str =
+    item (span [] [ text str ])
 
 
 bulletLink : String -> String -> CustomContent
